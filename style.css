@@ -18,6 +18,8 @@ body{
     justify-content: space-between;
     flex-direction: column;
     position: fixed;
+    border-right: 1px solid rgb(98, 92, 92);
+    border-radius: 2px;
 }
 .tags{
     display: flex;
@@ -82,9 +84,25 @@ body{
     width: 96%;
 
  }
+ .story-feed::-webkit-scrollbar
+ {
+    width: 0;
+    
+ }
+ .story-feed::-webkit-scrollbar-track{
+  background-color: transparent;  
+ }
+ .story-feed::-webkit-scrollbar-thumb{
+    background-color: transparent;
+ }
+ 
  .stories{
     margin:2vmin;
 
+ }
+ .stories p{
+    font-size: 1.6vmin;
+    
  }
  .story-feed img{
     height: 7vmin;
@@ -108,7 +126,7 @@ body{
  }
  .content{
     width: 50%;
-
+    z-index: 99;
     margin: auto;
     margin-top: 50px;
     box-shadow: 0.5px 0.5px 5px black;
@@ -129,6 +147,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+   
     
    
  }
@@ -151,10 +170,13 @@ body{
     font-size: 3vmin;
     cursor: pointer;
  }
- .like-components i:checked{
-    
+.like{
    color: red;
- }
+    
+}
+.like:hover{
+    color: black;
+}
 .save i{
     padding: 2vmin;
     font-size: 3vmin;
@@ -166,10 +188,10 @@ body{
 
 .suggetion-feed{
     height: 100vh;
-    width:29.5%;
+    width:auto;
    
-    position: fixed;
-    right: 0;
+    position: absolute;
+    right:30px;
 }
 .switch-account{
    
@@ -208,7 +230,7 @@ body{
 .suggested-accounts{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 30px;
 }
 .suggested-accounts img{
@@ -217,4 +239,17 @@ body{
 }
 .suggested-accounts a{
     text-decoration: none;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 5px;
+
+}
+.footer li,ul{
+    text-decoration: none;
+    color: rgb(194, 202, 209);
+    cursor: pointer;
 }
